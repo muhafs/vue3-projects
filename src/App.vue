@@ -1,16 +1,22 @@
 <template>
   <AppHeader />
   <div class="container">
-    <DcHeros />
+    <!-- <DcHeros /> -->
+    <Calendar />
   </div>
 </template>
 
 <script>
-import AppHeader from '@/components/AppHeader.vue'
-import DcHeros from '@/components/DcHeros.vue'
+import AppHeader from './components/AppHeader'
+// import DcHeros from './components/DcHeros'
+import Calendar from './components/Calendar'
 
 export default {
-  components: { AppHeader, DcHeros },
+  components: {
+    AppHeader,
+    // DcHeros,
+    Calendar
+  }
 }
 </script>
 
