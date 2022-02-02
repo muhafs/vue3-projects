@@ -1,22 +1,17 @@
 <template>
-  <AppHeader />
-  <div class="container">
-    <!-- <DcHeros /> -->
-    <Calendar />
-  </div>
+    <AppHeader />
+    <div class="container">
+        <router-view></router-view>
+    </div>
 </template>
 
 <script>
 import AppHeader from './components/AppHeader'
-// import DcHeros from './components/DcHeros'
-import Calendar from './components/Calendar'
 
 export default {
-  components: {
-    AppHeader,
-    // DcHeros,
-    Calendar
-  }
+    components: {
+        AppHeader
+    }
 }
 </script>
 
