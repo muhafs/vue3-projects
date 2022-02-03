@@ -1,49 +1,51 @@
 <template>
-    <div class="row justify-content-center">
-        <div class="col-6">
-            <h1 class="display-3 text-center mb-2">Calendar</h1>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <h1 class="display-3 text-center mb-2">Calendar</h1>
 
-            <section class="d-flex justify-content-between px-4">
-                <h2 class="text-center">{{ currentMonthName }}</h2>
-                <h2 class="text-center">{{ currentYear }}</h2>
-            </section>
-
-            <section class="d-flex justify-content-between mb-2">
-                <button class="btn btn-primary px-5" @click="prevMonth()">
-                    Prev
-                </button>
-                <button class="btn btn-primary px-5" @click="nextMonth()">
-                    Next
-                </button>
-            </section>
-
-            <main class="bg-secondary p-3 rounded text-white">
-                <section class="d-flex justify-content-center my-3">
-                    <p
-                        class="fs-5 text-center"
-                        style="width: 14.28%"
-                        v-for="day in days"
-                        :key="day">
-                        {{ day }}
-                    </p>
+                <section class="d-flex justify-content-between px-4">
+                    <h2 class="text-center">{{ currentMonthName }}</h2>
+                    <h2 class="text-center">{{ currentYear }}</h2>
                 </section>
 
-                <section class="d-flex justify-content-start flex-wrap">
-                    <p
-                        class="fs-5 text-center"
-                        style="width: 14.28%"
-                        v-for="num in startDay()"
-                        :key="num"></p>
-                    <p
-                        class="fs-5 text-center"
-                        style="width: 14.28%"
-                        v-for="num in monthInDays()"
-                        :key="num"
-                        :class="currentDateClass(num)">
-                        {{ num }}
-                    </p>
+                <section class="d-flex justify-content-between mb-2">
+                    <button class="btn btn-primary px-5" @click="prevMonth()">
+                        Prev
+                    </button>
+                    <button class="btn btn-primary px-5" @click="nextMonth()">
+                        Next
+                    </button>
                 </section>
-            </main>
+
+                <main class="bg-secondary p-3 rounded text-white">
+                    <section class="d-flex justify-content-center my-3">
+                        <p
+                            class="fs-5 text-center"
+                            style="width: 14.28%"
+                            v-for="day in days"
+                            :key="day">
+                            {{ day }}
+                        </p>
+                    </section>
+
+                    <section class="d-flex justify-content-start flex-wrap">
+                        <p
+                            class="fs-5 text-center"
+                            style="width: 14.28%"
+                            v-for="num in startDay()"
+                            :key="num"></p>
+                        <p
+                            class="fs-5 text-center"
+                            style="width: 14.28%"
+                            v-for="num in monthInDays()"
+                            :key="num"
+                            :class="currentDateClass(num)">
+                            {{ num }}
+                        </p>
+                    </section>
+                </main>
+            </div>
         </div>
     </div>
 </template>

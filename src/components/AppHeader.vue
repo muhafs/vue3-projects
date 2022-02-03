@@ -36,7 +36,8 @@ export default {
             list: [
                 { title: 'DC Heros List', to: '/dc-heros' },
                 { title: 'Calendar', to: '/calendar' },
-                { title: 'Markdown', to: '/markdown' }
+                { title: 'Markdown', to: '/markdown' },
+                { title: 'Slider Carousel', to: '/slider' }
             ]
         }
     }

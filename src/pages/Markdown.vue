@@ -1,18 +1,20 @@
 <template>
-    <h1 class="display-3 text-center mb-2">Markdown</h1>
-    <section class="row">
-        <article class="col" style="height: 75vh">
-            <textarea
-                class="w-100 h-100 form-control"
-                :value="text"
-                @input="updated"></textarea>
-        </article>
+    <div class="container">
+        <h1 class="display-3 text-center mb-2">Markdown</h1>
+        <section class="row">
+            <article class="col" style="height: 75vh">
+                <textarea
+                    class="w-100 h-100 form-control"
+                    :value="text"
+                    @input="updated"></textarea>
+            </article>
 
-        <article
-            class="col bg-light"
-            style="height: 75vh"
-            v-html="markedText"></article>
-    </section>
+            <article
+                class="col bg-light"
+                style="height: 75vh"
+                v-html="markedText"></article>
+        </section>
+    </div>
 </template>
 
 <script>
